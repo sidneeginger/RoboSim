@@ -1,0 +1,56 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RoboLogic", "RoboLogic\RoboLogic.vcxproj", "{638CCAE1-D73C-42EA-BCD9-8AA586F3205C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RoboPhysics", "RoboPhysics\RoboPhysics.vcxproj", "{09305236-5325-4D83-9C23-D750B40B2A90}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RoboModel", "RoboModel\RoboModel.vcxproj", "{A08D5FDB-7FD5-46C6-862F-763FCBA53FF0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RoboCamera", "RoboCamera\RoboCamera.vcxproj", "{ACE3E6A6-C899-40E4-A6CE-CBA807A94049}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RoboDecision", "RoboDecision\RoboDecision.vcxproj", "{E24F2B0F-E59F-4B3A-B638-94322FF62358}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RoboSimer", "RoboSimer\RoboSimer.vcxproj", "{D04815BA-7EA5-43C5-9B26-2B1AEC6F3878}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D406EC1D-3DBF-4EDC-866F-94C876C6D83B}"
+	ProjectSection(SolutionItems) = preProject
+		RoboSim.vsd = RoboSim.vsd
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{638CCAE1-D73C-42EA-BCD9-8AA586F3205C}.Debug|x86.ActiveCfg = Debug|Win32
+		{638CCAE1-D73C-42EA-BCD9-8AA586F3205C}.Debug|x86.Build.0 = Debug|Win32
+		{638CCAE1-D73C-42EA-BCD9-8AA586F3205C}.Release|x86.ActiveCfg = Release|Win32
+		{638CCAE1-D73C-42EA-BCD9-8AA586F3205C}.Release|x86.Build.0 = Release|Win32
+		{09305236-5325-4D83-9C23-D750B40B2A90}.Debug|x86.ActiveCfg = Debug|Win32
+		{09305236-5325-4D83-9C23-D750B40B2A90}.Debug|x86.Build.0 = Debug|Win32
+		{09305236-5325-4D83-9C23-D750B40B2A90}.Release|x86.ActiveCfg = Release|Win32
+		{09305236-5325-4D83-9C23-D750B40B2A90}.Release|x86.Build.0 = Release|Win32
+		{A08D5FDB-7FD5-46C6-862F-763FCBA53FF0}.Debug|x86.ActiveCfg = Debug|Win32
+		{A08D5FDB-7FD5-46C6-862F-763FCBA53FF0}.Debug|x86.Build.0 = Debug|Win32
+		{A08D5FDB-7FD5-46C6-862F-763FCBA53FF0}.Release|x86.ActiveCfg = Release|Win32
+		{A08D5FDB-7FD5-46C6-862F-763FCBA53FF0}.Release|x86.Build.0 = Release|Win32
+		{ACE3E6A6-C899-40E4-A6CE-CBA807A94049}.Debug|x86.ActiveCfg = Debug|Win32
+		{ACE3E6A6-C899-40E4-A6CE-CBA807A94049}.Debug|x86.Build.0 = Debug|Win32
+		{ACE3E6A6-C899-40E4-A6CE-CBA807A94049}.Release|x86.ActiveCfg = Release|Win32
+		{ACE3E6A6-C899-40E4-A6CE-CBA807A94049}.Release|x86.Build.0 = Release|Win32
+		{E24F2B0F-E59F-4B3A-B638-94322FF62358}.Debug|x86.ActiveCfg = Debug|Win32
+		{E24F2B0F-E59F-4B3A-B638-94322FF62358}.Debug|x86.Build.0 = Debug|Win32
+		{E24F2B0F-E59F-4B3A-B638-94322FF62358}.Release|x86.ActiveCfg = Release|Win32
+		{E24F2B0F-E59F-4B3A-B638-94322FF62358}.Release|x86.Build.0 = Release|Win32
+		{D04815BA-7EA5-43C5-9B26-2B1AEC6F3878}.Debug|x86.ActiveCfg = Debug|Win32
+		{D04815BA-7EA5-43C5-9B26-2B1AEC6F3878}.Debug|x86.Build.0 = Debug|Win32
+		{D04815BA-7EA5-43C5-9B26-2B1AEC6F3878}.Release|x86.ActiveCfg = Release|Win32
+		{D04815BA-7EA5-43C5-9B26-2B1AEC6F3878}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

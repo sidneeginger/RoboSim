@@ -1,0 +1,81 @@
+int CRoboSimerView::CheckForCollisions(void)
+{
+	float axbyczd=0.0f;
+	//================================================================================
+	// check for every point on simcube
+	for( int k=0; k<8; k++ )
+	{
+		for( int i=1; i<m_InDoorMap.m_FaceArray.GetSize(); i++ )
+		{
+			axbyczd = m_MathDefs.DotProduct(  &m_SimCube.m_PointList[k], 
+			&m_InDoorMap.m_FaceArray[i]->normal ) + m_InDoorMap.m_FaceArray[i]->d;
+			//TRACE( "\npointlist %f %f %f",m_SimCube.m_PointList[k].x, 
+				//m_SimCube.m_PointList[k].y, m_SimCube.m_PointList[k].z );
+			TRACE( "\n axbyczd %f", axbyczd );
+			if( axbyczd < 0 )
+				//TRACE( "\n Out Hourse with wall %d", i );
+				return -1;
+		}
+		BOOL IsInCube[6];
+		for( int i=0; i<m_InDoorMap.m_CubeArray.GetSize(); i++ )
+		{
+			for( int j=0; j<6; j++ )
+			{
+				axbyczd = m_MathDefs.DotProduct( &m_SimCube.m_PointList[k],
+					&m_InDoorMap.m_CubeArray[i]->face[j].normal )
+					+ m_InDoorMap.m_CubeArray[i]->face[j].d;
+				if( axbyczd < 0 ) 
+					IsInCube[j] = TRUE;
+				else 
+					IsInCube[j] = FALSE;
+				
+			}
+			if( IsInCube[0] && IsInCube[1] && IsInCube[2] &&
+				IsInCube[3] && IsInCube[4] && IsInCube[5] )
+				//TRACE( "\nIn Cube %d" , i);
+				return -1;
+		}
+	}
+
+	//========================================================================
+	// check for pos for simcube
+	//for( int k=0; k<8; k++ )
+	//{
+	//	for( int i=1; i<m_InDoorMap.m_FaceArray.GetSize(); i++ )
+	//	{
+	//		axbyczd = m_MathDefs.DotProduct(  &m_SimCube.m_PosPoint, 
+	//		&m_InDoorMap.m_FaceArray[i]->normal ) 
+	//		+ m_InDoorMap.m_FaceArray[i]->d -9.6;
+	//		//TRACE( "\n dis with wall %d -> %f", i , axbyczd );
+	//		//TRACE( "\nbox %f %f %f, %f %f %f", 
+	//		//	m_InDoorMap.m_FaceArray[i]->GetBox().x0,
+	//		////	m_InDoorMap.m_FaceArray[i]->GetBox().x1,
+	//		//	m_InDoorMap.m_FaceArray[i]->GetBox().y0,
+	//		//	m_InDoorMap.m_FaceArray[i]->GetBox().y1,
+	//		///	m_InDoorMap.m_FaceArray[i]->GetBox().z0,
+	//		//	m_InDoorMap.m_FaceArray[i]->GetBox().z1);
+	//		if( axbyczd < 0 )
+	//			//TRACE( "\n Out Hourse with wall %d", i );
+	//			return -1;
+	//	}
+	//	BOOL IsInCube[6];
+	//	for( int i=0; i<m_InDoorMap.m_CubeArray.GetSize(); i++ )
+	//	{
+	//		for( int j=0; j<6; j++ )
+	//		{
+	//			axbyczd = m_MathDefs.DotProduct( &m_SimCube.m_PosPoint,
+	//				&m_InDoorMap.m_CubeArray[i]->face[j].normal )
+	//				+ m_InDoorMap.m_CubeArray[i]->face[j].d - 9.6;
+	//			if( axbyczd < 0 ) 
+	//				IsInCube[j] = TRUE;
+	//			else 
+	//				IsInCube[j] = FALSE;
+	//		}
+	//		if( IsInCube[0] && IsInCube[1] && IsInCube[2] &&
+	//			IsInCube[3] && IsInCube[4] && IsInCube[5] )
+	//			//TRACE( "\nIn Cube %d" , i);
+	//			return -1;
+	//	}
+	//}
+	return 0;
+}
