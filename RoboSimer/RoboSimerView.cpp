@@ -145,13 +145,13 @@ BOOL CRoboSimerView::bSetupPixelFormat(void)
 
 	if ( (pixelformat = ChoosePixelFormat(m_pDC->GetSafeHdc(), &pfd)) == 0 )
 	{
-		MessageBox("ChoosePixelFormat failed");
+		MessageBox(_T("ChoosePixelFormat failed"));
 		return FALSE;
 	}
 
 	if (SetPixelFormat(m_pDC->GetSafeHdc(), pixelformat, &pfd) == FALSE)
 	{
-		MessageBox("SetPixelFormat failed");
+		MessageBox(_T("SetPixelFormat failed"));
 		return FALSE;
 	}
 
@@ -205,7 +205,7 @@ void CRoboSimerView::Init(void)
 	m_SimRobot.SetAngle( 0 );
 	
 	
-	m_InDoorMap.LoadFile( "hall.map" );
+	m_InDoorMap.LoadFile( _T("hall.map") );
 	m_Collision.LoadMap( &m_InDoorMap );
 
 	m_fLastTime = m_SimTimer.GetTime();

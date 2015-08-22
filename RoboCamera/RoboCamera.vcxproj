@@ -21,7 +21,7 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>Dynamic</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -66,7 +66,6 @@
     </ClCompile>
     <Link>
       <AdditionalOptions>shlwapi.lib %(AdditionalOptions)</AdditionalOptions>
-      <OutputFile>$(SolutionDir)$(OutDir)RoboCamera.dll</OutputFile>
       <ModuleDefinitionFile>.\RoboCamera.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -94,7 +93,6 @@
     </ClCompile>
     <Link>
       <AdditionalOptions>shlwapi.lib %(AdditionalOptions)</AdditionalOptions>
-      <OutputFile>$(SolutionDir)$(OutDir)RoboCamera.dll</OutputFile>
       <ModuleDefinitionFile>.\RoboCamera.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>

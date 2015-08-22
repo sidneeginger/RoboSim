@@ -14,19 +14,20 @@
     <ProjectGuid>{09305236-5325-4D83-9C23-D750B40B2A90}</ProjectGuid>
     <RootNamespace>RoboPhysics</RootNamespace>
     <Keyword>MFCDLLProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>Dynamic</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>Dynamic</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -65,7 +66,6 @@
     </ClCompile>
     <Link>
       <AdditionalOptions>Winmm.lib %(AdditionalOptions)</AdditionalOptions>
-      <OutputFile>$(SolutionDir)$(OutDir)RoboPhysics.dll</OutputFile>
       <ModuleDefinitionFile>.\RoboPhysics.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -93,7 +93,6 @@
     </ClCompile>
     <Link>
       <AdditionalOptions>winmm.lib %(AdditionalOptions)</AdditionalOptions>
-      <OutputFile>$(SolutionDir)$(OutDir)RoboPhysics.dll</OutputFile>
       <ModuleDefinitionFile>.\RoboPhysics.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
